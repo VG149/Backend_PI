@@ -5,7 +5,9 @@ import Signup from './Signup'
 import Home from './Home';
 import Opcoes from './Opcoes';
 import AddArtigo from './AddArtigo';
-
+import AddEventos from './AddEventos';
+import Participantes from './Participantes';
+import Principal from './Principal';
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
          <Route path ='/home' element={<Home />}></Route>
          <Route path ='/opcoes' element={<Opcoes />}></Route>
          <Route path ='/addartigo' element={<AddArtigo />}></Route>
+         <Route path ='/addeventos' element={<AddEventos />}></Route>
+         <Route path ='/participantes' element={<Participantes />}></Route>
+         <Route path ='/principal' element={<Principal />}></Route>
          
       </Routes>
       </BrowserRouter>

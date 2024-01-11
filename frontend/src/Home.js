@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {Link, useNavigate} from 'react-router-dom'
 import axios from "axios";
+import NavbarLogin from "./components/navbarLogin/navbarLogin";
+
 function Home(){
 
     const [artigo, setArtigo] = useState([])
@@ -18,15 +20,16 @@ function Home(){
     },[])
 
     return(
-        
+       
         <div>
+            <NavbarLogin />
             <h1> Artigos </h1>
             <div className="artigo" key={artigo.id}>
                 {artigo.map((artigo) => (
                 <div className="artigo">
-                <h2>{artigo.autor}</h2>
-                <p>{artigo.orientador}</p>
-                <p>{artigo.resumo}</p>
+                <h2>autor: {artigo.autor}</h2>
+                <p>orientador: {artigo.orientador}</p>
+                <p>resumo: {artigo.resumo}</p>
                 </div>
                 
                 ))}
